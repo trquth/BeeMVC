@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<br />
+<div id="bee-list">
+    @if (Model != null)
+    {
+        @Html.Partial("ListBeePartialView")
+    }
+    else
+    {
+        <div class="alert alert-info" role="alert">Create Random Bee Or Load From Database</div>
+    }
+   
+</div>

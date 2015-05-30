@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BeeMVC.Models.BeeViewModel>
+@if (Model == null)
+{
+
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Bee Type</th>
+                <th>Health</th>
+                <th>Dead</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BeeName</td>
+                    <td>@item.Health1 %</td>
+                    <td>@item.Dead</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
